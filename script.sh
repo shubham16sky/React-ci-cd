@@ -8,5 +8,5 @@ then
         sudo docker stop project && sudo docker rm project  && sudo docker run --name "project" --detach  frontend
 
 else
-        sudo docker run --name "project"  -p 5000:5000  frontend
+        sudo docker run --name "project"  -p 3000:3000  frontend
 fi

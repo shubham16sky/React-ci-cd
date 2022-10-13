@@ -15,4 +15,5 @@ RUN npm install -g serve
 #COPY . ./
 # start app serve -s build
 RUN npm run build
+EXPOSE 3000
 CMD ["app", "serve","-s","build"]
