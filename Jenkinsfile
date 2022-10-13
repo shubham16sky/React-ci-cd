@@ -1,9 +1,6 @@
 pipeline{
-    agent { label 'test-server' }
-     environment {
-        CREDENTIALS=credentials('sudopass')
-
-    }
+    agent { label 'marshal' }
+     
 
 
     stages{
@@ -28,7 +25,7 @@ pipeline{
         stage('Docker run')
         {
             steps{
-                sh 'echo $sudopass | ./script.sh'
+                sh './script.sh'
             }
         }
     }
