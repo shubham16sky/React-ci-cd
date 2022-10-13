@@ -7,7 +7,7 @@ pipeline{
         stage('Git checkout')
         {
             steps{
-                git branch: 'main', url: 'https://github.com/shubham16sky/flask-news-app.git'
+                git branch: 'main', url: 'https://github.com/shubham16sky/React-ci-cd.git'
             }
         }
         stage('Docker build')
