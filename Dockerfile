@@ -9,10 +9,10 @@ FROM node:alpine
 #COPY package-lock.json ./
 COPY . /application
 WORKDIR /application
-RUN npm i
+RUN npm install
 RUN npm install -g serve
 # add app
-COPY . ./
+#COPY . ./
 # start app serve -s build
 
 CMD ["app", "serve","-s","build"]
