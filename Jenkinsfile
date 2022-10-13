@@ -16,12 +16,7 @@ pipeline{
                 sh 'docker build -t frontend .'
             }
         }
-        stage('Removing Dangling images')
-        {
-            steps{
-                sh 'docker rmi $(docker image ls -q -f "dangling=true")'
-            }
-        }
+        
         stage('Docker run')
         {
             steps{
